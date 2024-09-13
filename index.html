@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George-Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8f43a4d0ae.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo" alt="">
+                <ol id="side_menu">
+                    <li><a href="#header">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li><a href="#sevices">Services</a></li>
+                    <li> <a href="#portfolio">Portfolio</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="close_menu()"></i>
+                </ol>
+                <i class="fa-solid fa-bars" onclick="open_menu()"></i>
+            </nav>
+            <section class="home">
+                <div class="header_text">
+                    <h3>Hello, it's me</h3>
+                    <h1>George Lecha</h1>
+                    <h3>I'm a <span>Full-Stack Developer!</span> </h3>
+                    <p>Creative web developer specializing in building responsive, user-friendly websites and
+                        applications.
+                        Let's turn your ideas into seamless digital experiences!</p>
+
+                    <div class="social_media">
+
+                        <a href="https://x.com/thepapperoute_"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="https://facebook.com/"><i class="fa-brands fa-square-facebook"></i></i></a>
+                        <a href="https://instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/DORCAS SUSANS I CURRICULUM VITAE.pdf" download class="btn_home">Download CV</a>
+                </div>
+
+                <div class="home_image">
+                    <img src="images/george_home.png" alt="george's photo">
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+
+
+    <!-- ------------------------About Section----------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+
+
+
+                <div class="about_col_1">
+                    <img class="about-gee" src="images/about-gee.png" alt="about me image">
+
+
+                </div>
+                <div class="about_col_2">
+                    <h1 class="about_me">About Me</h1>
+                    <p>I am a passionate Web Developer, Web Designer, and Graphic Designer with a knack for creating
+                        visually stunning and highly functional digital experiences. With a strong foundation in
+                        front-end development and a keen eye for design, I specialize in building responsive,
+                        user-friendly websites that not only perform well but also deliver engaging aesthetics. My
+                        expertise in HTML, CSS, JavaScript, and design tools like Adobe Creative Suite and Figma allows
+                        me to seamlessly blend creativity with technology, bringing projects to life from concept to
+                        completion. Whether you need a sleek website, a modern user interface, or captivating visual
+                        content, I’m here to make your vision a reality.</p>
+
+                    <div class="tab_titles">
+                        <p class="tab_links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab_links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab_links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <!-- ------------skill------ -->
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>UX/UI</span><br>Designing website layouts</li>
+                            <li><span>Web Development</span><br>Coding real websites</li>
+                            <li><span>SEO</span><br>Ranking websites on search engines</li>
+                            <li><span>Graphics Design</span><br>Adding taste to your visuals</li>
+                        </ul>
+                    </div>
+
+                    <!-- -------Experience------ -->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Web Development</span><br>Experience building responsive, interactive websites
+                                using HTML, CSS, JavaScript, and frameworks like React and Bootstrap.</li>
+                            <li><span>Web Design</span><br>Skilled in creating user-friendly, visually appealing designs
+                                with tools like Figma and Adobe XD, ensuring seamless user experiences.</li>
+                            <li><span>Graphic Design</span><br>Proficient in designing logos, banners, and marketing
+                                materials using Adobe Illustrator and Photoshop, focusing on brand
+                                consistency.Proficient in designing logos, banners, and marketing materials using Adobe
+                                Illustrator and Photoshop, focusing on brand consistency.</li>
+                            <li><span>Project Collaboration</span><br>Worked on full-stack projects with back-end teams,
+                                delivering complete web solutions in Agile environments.</li>
+                        </ul>
+                    </div>
+
+                    <!-- -------Education------- -->
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>Bachelor’s Degree in Computer Science</span><br> University Nairobi, 2023 Focused
+                                on web development, programming, and software engineering.</li>
+                            <li><span>Certification in Web Design & UX/UI</span><br>University of Nairobi, 2022
+                                Specialized training in web design, user experience, and interface design.</li>
+                            <li><span>Certification in Graphic Design</span><br>University of Nairobi, 2022. Gained
+                                expertise in visual communication and design tools like Adobe Creative Suite.
+
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------------SERVICES SECTION-------------------- -->
+
+    <div id="sevices">
+        <div class="container">
+            <h1 class="about_me">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-figma"></i>
+                    <h2><span>Web Design</span></h2>
+                    <p>I build responsive, fast-loading websites using modern technologies like HTML, CSS, JavaScript,
+                        and frameworks like React, ensuring seamless functionality across all devices.</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2><span>Web Development</span></h2>
+                    <p>I build responsive, fast-loading websites using modern technologies like HTML, CSS, JavaScript,
+                        and frameworks like React, ensuring seamless functionality across all devices.</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <h2><span>Graphic Design</span></h2>
+                    <p>From logos to marketing materials, I provide creative graphic design services using Adobe
+                        Illustrator and Photoshop, helping your brand stand out with visually compelling content.</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-gears"></i>
+                    <h2><span>Full-Stack Solutions</span></h2>
+                    <p>Offering end-to-end web solutions by collaborating with back-end teams to integrate APIs and
+                        databases, delivering fully functional and optimized web applications.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- -----------------Portfolio------------- -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="about_me">My Work</h1>
+            <div class="work-list">
+
+                <!-- ---------work1----------- -->
+                <div class="work">
+                    <img src="images/work-1.png" alt="work1">
+                    <div class="project">
+                        <h3>Portfolio Website</h3>
+                        <p>Designed and built a personal portfolio showcasing creative work, complete with interactive
+                            galleries and smooth navigation.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+
+
+                </div>
+
+                <!-- -------------work2----------- -->
+
+                <div class="work">
+                    <img src="images/work-2.png" alt="work-2">
+                    <div class="project">
+                        <h3>E-Commerce Website</h3>
+                        <p>Developed a responsive online store with secure payment integration, dynamic product catalog,
+                            and a user-friendly shopping experience.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+
+                </div>
+
+                <!-- ---------work3----------- -->
+
+                <div class="work">
+                    <img src="images/work-3.png" alt="work3">
+                    <div class="project">
+                        <h3>Business Landing Page</h3>
+                        <p>Created a clean and modern landing page for a small business, optimized for conversions and
+                            featuring contact forms and lead generation.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <a class="sm_btn" href="#">SEE MORE</a>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- --------------------Contact--------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="left-side">
+                    <h1 class="about_me">Reach Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>info@gee11.co.ke</p>
+                    <p><i class="fa-solid fa-phone"></i>+254728207169</p>
+
+                    <div class="socials">
+                        <a href="https://x.com/thepapperoute_"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="https://facebook.com/"><i class="fa-brands fa-square-facebook"></i></i></a>
+                        <a href="https://instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="right-side">
+                    <form name="submit-to-google-sheet" action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="10" placeholder="Your Message Here"></textarea>
+                        <button type="submit" class="sm_btn btn2">Send Message</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright_section">
+        <p>Copyright © George. Made with <i class="fa-solid fa-heart"></i> by Novus Digital and Co.
+        </p>
+    </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab_links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+
+        }
+    </script>
+
+    <script>
+        let sideMenu = document.getElementById("side_menu");
+        function open_menu() {
+            sideMenu.style.right = "0";
+        }
+
+        function close_menu() {
+            sideMenu.style.right = "-200px";
+        }
+
+
+    </script>
+
+    <!-- -----------------script to receive email communications using google sheets using a script from github [github script src url: https://github.com/jamiewilson/form-to-google-sheets ] -->
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzTr9GtocK_V_cg1awyxndI6JKB_Qs0yx8-LQm7qu91rfjePfMMNQ-c27TO49XvWp2TgA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 4000)
+
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
+
+
+</body>
+
+</html>
