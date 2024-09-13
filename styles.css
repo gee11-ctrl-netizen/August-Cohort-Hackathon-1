@@ -16,6 +16,7 @@ body {
 }
 
 
+
 section {
     height: 120vh;
 
@@ -482,6 +483,17 @@ nav .fa-solid {
 
     }
 
+    .header_text {
+
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+
+
     .home {
         flex-direction: column;
     }
@@ -499,12 +511,37 @@ nav .fa-solid {
         font-size: 1rem;
     }
 
-    .home_image img {
+    .home_image {
         width: 70vw;
         margin-top: 4rem;
         margin-bottom: 20rem;
 
     }
+
+    .home_image img {
+        animation: floatImage 4s ease-in-out infinite;
+    }
+
+
+    @keyframes floatImage {
+
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-2.4rem);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+
+    }
+
+
+
+
 
 
 

@@ -70,7 +70,8 @@
                 </div>
                 <div class="about_col_2">
                     <h1 class="about_me">About Me</h1>
-                    <p>I am a passionate Web Developer, Web Designer, and Graphic Designer with a knack for creating
+                    <p class="abt_description">I am a passionate Web Developer, Web Designer, and Graphic Designer with
+                        a knack for creating
                         visually stunning and highly functional digital experiences. With a strong foundation in
                         front-end development and a keen eye for design, I specialize in building responsive,
                         user-friendly websites that not only perform well but also deliver engaging aesthetics. My
@@ -273,62 +274,12 @@
     </div>
     </div>
 
-    <script>
 
-        var tablinks = document.getElementsByClassName("tab_links")
-        var tabcontents = document.getElementsByClassName("tab-contents")
+    <!-- ----------------------Scroll reveal------------- -->
 
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link")
-            document.getElementById(tabname).classList.add("active-tab")
-
-        }
-    </script>
-
-    <script>
-        let sideMenu = document.getElementById("side_menu");
-        function open_menu() {
-            sideMenu.style.right = "0";
-        }
-
-        function close_menu() {
-            sideMenu.style.right = "-200px";
-        }
-
-
-    </script>
-
-    <!-- -----------------script to receive email communications using google sheets using a script from github [github script src url: https://github.com/jamiewilson/form-to-google-sheets ] -->
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzTr9GtocK_V_cg1awyxndI6JKB_Qs0yx8-LQm7qu91rfjePfMMNQ-c27TO49XvWp2TgA/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully!"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 4000)
-
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
-
-
-
+    <script src="index.js"></script>
 
 </body>
 
