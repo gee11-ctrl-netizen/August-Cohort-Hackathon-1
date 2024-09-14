@@ -16,9 +16,59 @@ body {
 }
 
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: #003366;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 2rem;
+    color: #F7F7F7;
+    font-weight: 600;
+    cursor: default;
+
+}
+
+.header a span {
+    color: #FF6B6B;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: #F7F7F7;
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #FF6B6B;
+
+}
+
+#menu-icon {
+    font-size: 3rem;
+    color: #F7F7F7;
+    display: none;
+
+}
+
+
+
 
 section {
-    height: 120vh;
+    height: 100vh;
 
 }
 
@@ -28,10 +78,32 @@ section {
     align-items: center;
 }
 
-.home_image.about-gee {
+.home_image img {
     width: 35vw;
 }
 
+.home_image {
+    animation: floatImage 4s ease-in-out infinite;
+
+}
+
+
+
+@keyframes floatImage {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
 
 
 
@@ -46,11 +118,9 @@ nav {
     align-items: center;
 }
 
-.logo {
-    width: 140px;
-}
 
-nav ol li {
+
+/* nav ol li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
@@ -77,7 +147,7 @@ nav ol li a::after {
 nav ol li a:hover::after {
     width: 100%;
 }
-
+ */
 
 
 
@@ -449,39 +519,74 @@ form .btn2 {
 }
 
 
-.copyright_section {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
     background: #007BA7;
-    margin-top: 20px;
-    font-weight: 300;
-    font-size: 17px;
+    text-align: center;
+
 }
 
-.copyright_section i {
+
+.footer-text p {
+    font-size: 1.2rem;
+
+}
+
+.footer-text i {
     color: #FF6B6B;
 }
 
 
-nav .fa-solid {
-    display: none;
+.footerIconTop a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem;
+    background: #FF6B6B;
+    border-radius: 0.6rem;
+
 }
+
+.footerIconTop a i {
+    font-size: 2rem;
+    color: #003366;
+}
+
 
 /* -----------------CSS For Small Screens----------------- */
 
 @media only screen and (max-width: 768px) {
 
 
+    /* 
     #header nav {
         margin-bottom: 50%;
-    }
+    } */
 
 
-    .home.header_text {
+    /* .home.header_text {
         margin-top: 100%;
 
+    } */
+
+
+    .logo {
+        font-size: 1rem;
+        color: #F7F7F7;
+        font-weight: 600;
+        cursor: default;
+
     }
+
+    .footer-text p {
+        font-size: 1rem;
+
+    }
+
 
     .header_text {
 
@@ -511,69 +616,17 @@ nav .fa-solid {
         font-size: 1rem;
     }
 
-    .home_image {
+    .home_image img {
         width: 70vw;
         margin-top: 4rem;
-        margin-bottom: 20rem;
-
-    }
-
-    .home_image img {
-        animation: floatImage 4s ease-in-out infinite;
-    }
-
-
-    @keyframes floatImage {
-
-        0% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-2.4rem);
-        }
-
-        100% {
-            transform: translateY(0);
-        }
+        margin-bottom: 4rem;
+        animation: none;
+        justify-content: center;
 
     }
 
 
 
-
-
-
-
-    nav .fa-solid {
-        display: block;
-        font-size: 25px;
-    }
-
-    nav ol {
-        background: #FF6B6B;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        position: fixed;
-        padding-top: 45px;
-        z-index: 2;
-        transition: right 0.5s;
-
-    }
-
-    nav ol li {
-        display: block;
-        margin: 24px;
-    }
-
-    nav ol .fa-solid {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
 
     .about_me {
         font-size: 3rem;
@@ -603,9 +656,7 @@ nav .fa-solid {
         flex-basis: 100%;
     }
 
-    .copyright_section {
-        font-size: 14px;
-    }
+
 
 
     .row {
@@ -684,4 +735,37 @@ nav .fa-solid {
     .home.header_text {
         margin-top: auto;
     }
+}
+
+
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #003366;
+        border-top: .1rem solid rgba(0, 0, 0, 0.3);
+        box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.3);
+        display: none;
+
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2.4rem;
+        margin: 3rem;
+    }
+
+
 }
