@@ -574,6 +574,11 @@ form .btn2 {
     } */
 
 
+    #menu-icon {
+        font
+    }
+
+
     .logo {
         font-size: 1rem;
         color: #F7F7F7;
@@ -742,6 +747,7 @@ form .btn2 {
 @media (max-width: 768px) {
     #menu-icon {
         display: block;
+        font-size: 2rem;
     }
 
     .navbar {
@@ -763,8 +769,8 @@ form .btn2 {
 
     .navbar a {
         display: block;
-        font-size: 2.4rem;
-        margin: 3rem;
+        font-size: 1.7rem;
+        margin: 2rem;
     }
 
 
